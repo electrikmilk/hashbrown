@@ -24,8 +24,8 @@ const (
 	False       TokenType = "false"
 	Comment     TokenType = "comment"
 	Expression  TokenType = "expression"
-	Variable    TokenType = "variable"
-	Constant    TokenType = "constant"
+	Variable    TokenType = "var"
+	Constant    TokenType = "const"
 	Conditional TokenType = "conditional"
 	Iterator    TokenType = "iterator"
 )
