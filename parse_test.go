@@ -57,6 +57,8 @@ func TestParser(t *testing.T) {
 			} else {
 				Exit("Expected equality operator")
 			}
+		default:
+			Exit(fmt.Sprintf("Illegal character '%s'", string(CurrentChar)))
 		}
 	})
 	if fileError != nil {
