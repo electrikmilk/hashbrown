@@ -16,8 +16,8 @@ var Tokens []Token
 const (
 	String      TokenType = "\""
 	Integer     TokenType = "0123456789.-"
-	Dict        TokenType = "{"
-	Arr         TokenType = "["
+	Dictionary  TokenType = "{"
+	Array       TokenType = "["
 	Bool        TokenType = "boolean"
 	Date        TokenType = "date"
 	True        TokenType = "true"
@@ -25,8 +25,9 @@ const (
 	Comment     TokenType = "comment"
 	Expression  TokenType = "expression"
 	Variable    TokenType = "variable"
-	Action      TokenType = "action"
+	Constant    TokenType = "constant"
 	Conditional TokenType = "conditional"
+	Iterator    TokenType = "iterator"
 )
 
 /* Operators */
