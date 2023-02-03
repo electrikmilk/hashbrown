@@ -9,7 +9,6 @@ import (
 /* Really simple parser test */
 
 const Package TokenType = "package"
-const Constant TokenType = "const"
 const Build TokenType = "go:build"
 
 func TestParser(t *testing.T) {
