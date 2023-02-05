@@ -23,10 +23,10 @@ func TestParser(t *testing.T) {
 				AdvanceChar()
 				var platform = Collect('\n')
 				Tokens = append(Tokens, Token{
-					kind:       Build,
-					identifier: "build",
-					valueType:  String,
-					value:      platform,
+					Kind:       Build,
+					Identifier: "build",
+					ValueType:  String,
+					Value:      platform,
 				})
 			} else {
 				Exit("Expected build token")
@@ -35,10 +35,10 @@ func TestParser(t *testing.T) {
 			AdvanceChar()
 			var identifier = Collect('\n')
 			Tokens = append(Tokens, Token{
-				kind:       Constant,
-				identifier: "package",
-				valueType:  String,
-				value:      identifier,
+				Kind:       Constant,
+				Identifier: "package",
+				ValueType:  String,
+				Value:      identifier,
 			})
 		case TokenAhead(Constant):
 			AdvanceChar()
@@ -49,10 +49,10 @@ func TestParser(t *testing.T) {
 				AdvanceChars(2)
 				value = CollectString()
 				Tokens = append(Tokens, Token{
-					kind:       Constant,
-					identifier: identifier,
-					valueType:  String,
-					value:      value,
+					Kind:       Constant,
+					Identifier: identifier,
+					ValueType:  String,
+					Value:      value,
 				})
 			} else {
 				Exit("Expected equality operator")
