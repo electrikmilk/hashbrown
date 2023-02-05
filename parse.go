@@ -218,14 +218,14 @@ func TokensAhead(t ...TokenType) bool {
 	return false
 }
 
-// NextChar returns the character ahead of the current character.
-func NextChar(mov int) rune {
-	return seek(&mov, false)
+// NextChar returns the character `n` ahead of the current character.
+func NextChar(n int) rune {
+	return seek(&n, false)
 }
 
-// PrevChar returns the character previous to the current character.
-func PrevChar(mov int) rune {
-	return seek(&mov, true)
+// PrevChar returns the character `n` previous to the current character.
+func PrevChar(n int) rune {
+	return seek(&n, true)
 }
 
 func seek(mov *int, reverse bool) (requestedChar rune) {
