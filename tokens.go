@@ -3,10 +3,10 @@ package hashbrown
 type TokenType string
 
 type Token struct {
-	kind       TokenType
-	identifier string
-	valueType  TokenType
-	value      any
+	Kind       TokenType
+	Identifier string
+	ValueType  TokenType
+	Value      any
 }
 
 var Tokens []Token
