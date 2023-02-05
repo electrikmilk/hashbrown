@@ -260,7 +260,7 @@ func GetChar(i int) rune {
 	return -1
 }
 
-// PrintCurrentChar is a debug function prints out the character at the parsers current index, the unicode number of that character and the line and column number of where it is located.
+// PrintCurrentChar is a debug function that prints out the character at the parsers current index, the unicode number of that character and the line and column number of where it is located.
 // If the current character is a tab, new line, carriage return, or space, it will be substituted with a descriptor.
 // Output Format:
 // [line:column] (character) (code)
