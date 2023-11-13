@@ -58,15 +58,14 @@ func Collect(until rune) (collected string) {
 }
 
 // CollectInteger advances and collects `CurrentChar` until it stops matching the `Integer` type, then returns `collected`.
-func CollectInteger() (collected string) {
-	for strings.Contains(
-		string(Integer),
-		string(CurrentChar),
-	) {
-		collected += string(CurrentChar)
+func CollectInteger() string {
+	var collection strings.Builder
+	for (CurrentChar >= '0' && CurrentChar <= '9') || CurrentChar == '-' || CurrentChar == '.' {
+		collection.WriteRune(CurrentChar)
 		AdvanceChar()
 	}
-	return
+
+	return collection.String()
 }
 
 // CollectString advances and collects `CurrentChar` until we reach an unescaped double quote, then returns `collected`.
